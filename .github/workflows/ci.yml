@@ -46,3 +46,6 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+      - name: "Deploy Docker compose stack! 🚀"
+        run: |
+          curl -v -k -X POST https://portainer.mediaboxapps.romancincloud.ovh/api/stacks/webhooks/0f0c2641-4630-4bc2-afc7-af248d4c9aad
